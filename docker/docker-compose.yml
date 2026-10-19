@@ -1,0 +1,12 @@
+services:
+  patrol-node:
+    image: ${REGISTRY:-registry.internal/patrol}/${IMAGE_NAME:-vision-patrol-node}:${IMAGE_TAG:-latest}
+    container_name: patrol-node-1
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./volumes/patrol-node-1/models:/app/models
+      - ./volumes/patrol-node-1/logs:/app/logs
+    env_file:
+      - .env
+    restart: unless-stopped

@@ -1,0 +1,35 @@
+# 版本控制与本地环境
+.git
+.gitignore
+.github
+.env
+.env.local
+.env.*.local
+
+# Python 运行产物
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+.venv
+venv
+env
+.pytest_cache
+
+# 编辑器 / 系统
+.vscode
+.idea
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# 日志与体积大的模型权重（模型走卷挂载，不打进镜像）
+logs
+*.log
+models
+
+# 文档只保留容器说明
+*.md
+!docker/README.md

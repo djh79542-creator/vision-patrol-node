@@ -1,0 +1,28 @@
+# 本地配置与运行产物
+.env
+docker/.env
+logs/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# 虚拟环境
+.venv/
+venv/
+
+# 构建产物
+dist/
+node_modules/
+
+# 视觉权重（体积大，首次运行自动下载）
+models/
+*.caffemodel
+*.prototxt
+
+# 容器数据卷
+docker/volumes/
+
+# 编辑器与系统
+.vscode/
+.idea/
+.DS_Store
